@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:fragment="head">
+  <title>Index</title>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,200&display=swap"
+    rel="stylesheet">
+  <link th:href="@{/style.css}" rel="stylesheet">
+  <link th:href="@{style/swiper-element-bundle.min.css}" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+
+  <div class="main">
+    <!-- <p class="title" th:text="${titulo}">titulo</p> -->
+
+
+
+
+
+    <div class="main-title">
+
+      <div class="container-title">
+        <h1> <strong>Mot</strong>flux</h1>
+      </div>
+
+      <div class="container-circle">
+        <div class="circulo">
+
+        </div>
+
+        <div class="circulo2">
+
+        </div>
+      </div>
+
+
+
+      <div class="boton-administrador">
+        <center>
+          <p>Agregar pelicula</p>
+        </center>
+      </div>
+
+
+
+    </div>
+
+    <div class="contenido-header">
+
+    </div>
+    <div class="refres">
+      <h2>Comedia</h2>
+      <button class="refre">
+        <h5>Refrescar</h5>
+      </button>
+    </div>
+
+    <div class="container-movies">
+
+
+
+
+      <div class="first-container">
+        <div class="slide-content">
+
+            
+            <swiper-container class="mySwiper" pagination="true" effect="coverflow" grab-cursor="true" centered-slides="true"
+            slides-per-view="3" coverflow-effect-rotate="50" coverflow-effect-stretch="0" coverflow-effect-depth="100"
+            coverflow-effect-modifier="1" coverflow-effect-slide-shadows="true">
+            <swiper-slide th:each="comedias : ${comedias}">
+              
+              <!-- th:class="${comedias.nombre}" -->
+              <div class="contenedor-co"  >
+                <img th:src="@{${'/imagenes/' + comedias.imagen}}" width="120">
+              </img>
+
+              <style th:inline="text">
+                .contenedor-co {
+                  background: url("/*[[@{'/imagenes/'+${comedias.imagen}}]]*/");
+                }
+              </style>
+
+                <p th:text="${comedias.nombre}">
+                </p>
+                
+                <button>Rentar</button>
+
+              </div>
+               
+            
+            </swiper-slide>
+          </swiper-container>
+
+
+
+        </div>
+
+
+      </div>
+
+      <h2>Terror</h2>
+      <div class="second-container tamaño">
+       
+        <swiper-container class="mySwiper" pagination="true" effect="coverflow" grab-cursor="true" centered-slides="true"
+        slides-per-view="2" coverflow-effect-rotate="50" coverflow-effect-stretch="0" coverflow-effect-depth="100"
+        coverflow-effect-modifier="1" coverflow-effect-slide-shadows="true">
+        <swiper-slide th:each="terror : ${terror}">
+          
+          <div class="contenedor-co">
+            <p th:text="${terror.nombre}">
+            </p><button>Rentar</button>
+          </div>
+           
+        
+        </swiper-slide>
+      </swiper-container>
+       
+
+
+      </div>
+      <h2>Suspenso</h2>
+      <div class="third-container tamaño">
+
+
+      </div>
+      <h2>Acción</h2>
+      <div class="fourth-container tamaño">
+
+
+      </div>
+      <h2>Romance</h2>
+      <div class="fiveth-container tamaño">
+
+
+      </div>
+
+      <h2>Aventura</h2>
+      <div class="sixth-container tamaño">
+
+
+      </div>
+
+      <h2>Drama</h2>
+      <div class="seventh-container tamaño">
+
+
+      </div>
+
+
+
+
+
+
+    </div>
+
+  </div>
+
+  <div class="container-form">
+    <div class="form">
+      <form method="POST" th:action="@{/}" enctype="multipart/form-data">
+        <div class=" ">
+          <div class="col-12 col-md-4">
+            Nombre de la película</br>
+            <input type="text" class="" name="nombre"></br>
+          </div>
+          <div class="">
+            Introduce el Genero de la película</br>
+            <input type="text" class="" name="genero"></br>
+          </div>
+          <div class="">
+            Introduce Año de la película</br>
+            <input type="number" class="" name="año"></br>
+          </div>
+          <div class="">
+            Introduce las cantidades disponibles para prestar</br>
+            <input type="number" class="" name="unidades"></br>
+          </div>
+
+           <div class="">
+            Ingresa la imagen de la película: </br>
+            <input type="file" class="" name="file" id="imagen"></br>
+           
+          </div> 
+
+
+          <div>
+            <button class="boton-form">Agregar</button>
+          </div>
+
+      </form>
+    </div>
+
+    
+
+  </div>
+
+
+  <script type="text/javascript" th:src="@{/js/index.js}"></script>
+  <script type="text/javascript" th:src="@{/js/swiper-element-bundle.min.js}"></script>
+
+</body>
+
+</html>

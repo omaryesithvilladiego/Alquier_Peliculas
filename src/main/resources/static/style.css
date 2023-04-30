@@ -1,0 +1,242 @@
+
+*{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+}
+html {
+    margin: 0;
+    padding: 0;
+    
+
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+
+   
+}
+
+
+
+
+.contenido-header {
+    width: 100%;
+    height: 8rem;
+    overflow: hidden;
+}
+
+.form {
+    position: absolute;
+    background-color: red;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    transition: 800ms ease-in;
+    z-index: 1000;
+}
+
+
+.main-title {
+    background-color: #E63946;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    max-width: 100%; /* Ancho del contenedor fijo */
+    margin: 0 auto; /* Centrar horizontalmente el contenedor fijo */
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+h1 {
+    margin: 0;
+    padding: 2rem;
+
+}
+
+
+.container-circle {
+    
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(2, 16fr);
+    
+}
+
+.circulo {
+    
+    width: 2rem;
+    height: 2rem;
+    clip-path: circle(50% at 50% 50%);
+    background-color: #F1FAEE;
+    top: 1rem;
+    left: 15rem;
+    grid-column-start: 2;
+    grid-row-start: 1;
+    
+
+}
+
+.circulo2 {
+   
+    width: 1.5rem;
+    height: 1.5rem;
+    clip-path: circle(50% at 50% 50%);
+    background-color: #F1FAEE;
+    top: 3rem;
+    left: 18rem;
+    grid-column-start: 3;
+    grid-row-start: 2;
+}
+
+.container-title {
+    background-color: #1D3557;
+    width: 10rem;
+    transition: 800ms ease-in-out;
+    cursor: pointer;
+    color: #F1FAEE;
+}
+
+.container-title:hover {
+    background-color: #F1FAEE;
+    width: 10rem;
+    color: #1D3557;
+    transition: 800ms ease-in-out;
+    font-weight: bold;
+}
+
+
+
+.title {
+    margin: 0;
+    background-color: white;
+}
+
+
+
+
+.refres {
+    display: flex;
+    justify-content: space-between;
+}
+
+.refre {
+    width: 8rem;
+    height: 2rem;
+    margin: 0;
+}
+
+
+h2 {
+    font-size: 2rem;
+}
+
+h5 {
+    margin: 0;
+    padding: 0;
+}
+
+.boton-administrador {
+    width: 6rem;
+    height: 3rem;
+    background-color: #F1FAEE;
+    margin-right: 1rem;
+    border-radius: 0.5rem;
+   cursor: pointer;
+   padding: 0.5rem;
+   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    transition: 200ms ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boton-administrador:hover {
+  
+    background-color: #1D3557;
+    color: white;
+    transition: 200ms ease-in-out;
+    scale: 1.1;
+
+}
+
+/* Formulario */
+
+
+
+
+
+
+.container-form {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color:  rgba(0, 0, 0, 0.4);
+    display: none;
+    transition: 800ms ease-in;
+}
+
+.show{
+    display: block;
+    transition: 800ms ease-in;
+}
+
+
+/* Slider  */
+
+
+
+
+
+
+.contenedor-co {
+    /* background: url("[[${#httpServletRequest.contextPath}/imagenes/]]' + '[[${comedias.imagen}]]"); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    padding: 2rem;
+    height: 12rem;
+}
+
+.contenedor-co {
+    background-color: red;
+    border-radius: 10px;
+    padding: 2rem;
+    height: 12rem;
+    position: relative;
+
+}
+
+img {
+   
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
+
