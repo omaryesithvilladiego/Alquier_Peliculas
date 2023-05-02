@@ -16,11 +16,19 @@ p {
 }
 body {
     margin: 0;
-    padding: 0;
+    padding-left: 2rem;
+    padding-right: 2rem;
     box-sizing: border-box;
     position: relative;
+}
 
-   
+@media (min-width: 800px) {
+    body {
+        padding-left: 5rem;
+        padding-right: 5rem;
+        
+        
+    }
 }
 
 
@@ -43,6 +51,7 @@ body {
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
     transition: 800ms ease-in;
     z-index: 1000;
+    margin-top: 2rem;
 }
 
 
@@ -55,7 +64,7 @@ body {
     margin: 0 auto; /* Centrar horizontalmente el contenedor fijo */
     top: 0;
     left: 0;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     z-index: 1000;
 }
@@ -136,6 +145,8 @@ h1 {
     width: 8rem;
     height: 2rem;
     margin: 0;
+    background-color: transparent;
+    border: none;
 }
 
 
@@ -145,7 +156,22 @@ h2 {
 
 h5 {
     margin: 0;
-    padding: 0;
+    padding: 0.2rem;
+    border-radius: 0.5rem;
+    background-color: #1D3557;
+    color: white;
+    transition: 300ms ease-in-out;
+    cursor: pointer;
+
+}
+
+h5:hover {
+
+    border-radius: 0.5rem;
+    background-color:#abbfdb;
+    color: black;
+    scale: 1.1;
+    
 }
 
 .boton-administrador {
@@ -203,6 +229,25 @@ a{
     transition: 800ms ease-in;
 }
 
+.bt-rentar {
+    background-color: #1D3557;
+    color: white;
+    border-radius: 7px;
+    cursor: pointer;
+    border: none;
+    transition: 300ms ease-in-out;
+
+}
+
+.bt-rentar:hover {
+    background-color: #abbfdb;
+    color: black;
+    scale: 1.1;
+    cursor: pointer;
+   
+
+}
+
 
 /* Slider  */
 
@@ -211,32 +256,33 @@ a{
 
 
 
-.contenedor-co {
-    /* background: url("[[${#httpServletRequest.contextPath}/imagenes/]]' + '[[${comedias.imagen}]]"); */
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 10px;
-    padding: 2rem;
-    height: 12rem;
-}
+
 
 .contenedor-co {
-    background-color: red;
+    
     border-radius: 10px;
     padding: 2rem;
-    height: 12rem;
-    position: relative;
+    
 
 }
+
 
 img {
    
     margin: 0;
     padding: 0;
+    border-radius: 1rem;
 }
 
+.genero {
+    font-weight: bold;
+    font-size: 0.8rem;
+}
 
-
+p {
+    font-style: italic;
+    font-weight: 700;
+}
 
 
 

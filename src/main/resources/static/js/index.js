@@ -4,7 +4,14 @@ const divForm = document.querySelector(".container-form")
 const botonF = document.querySelector(".boton-form")
 const refre = document.querySelector(".refre")
 boton.addEventListener('click', () => {
-   divForm.classList.toggle("show")
+   const ver = divForm.classList.toggle("show")
+   
+   if(ver) {
+      boton.innerHTML = "Volver"
+   } else {
+      boton.innerHTML = "Agregar pelicula"
+   }
+   
    
 })
 

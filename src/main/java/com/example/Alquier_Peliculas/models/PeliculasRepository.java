@@ -16,7 +16,7 @@ public interface PeliculasRepository extends CrudRepository<Pelicula, Long>
 
     @Transactional
 
-    @Query (value = "select p.Idpelicula,p.imagen, p.nombre, p.genero, p.año, p.unidades from pelicula p where p.genero= :genero", nativeQuery = true)
+    @Query (value = "select p.Idpelicula,p.imagen, p.nombre, p.genero, p.año, p.unidades, p.precio from pelicula p where p.genero= :genero", nativeQuery = true)
     public List<Pelicula> consultarUsuarioPoComedia(@Param("genero") String genero);
 
     

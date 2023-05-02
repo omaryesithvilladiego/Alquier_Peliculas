@@ -24,6 +24,7 @@ public class Pelicula implements Serializable {
     private Long Idpelicula;
     private String Imagen;
 
+    
     @Column(name = "nombre")
     private String nombre;
     @Column(name = "genero")
@@ -32,6 +33,8 @@ public class Pelicula implements Serializable {
     private int año;
     @Column(name = "unidades")
     private int unidades;
+    @Column(name = "precio")
+    private Float precio;
 
     
 
@@ -39,13 +42,14 @@ public class Pelicula implements Serializable {
 
     }
 
-    public Pelicula(Long idpelicula,String imagen, String nombre, String genero, int año, int unidades) {
+    public Pelicula(Long idpelicula,String imagen, String nombre, String genero, int año, int unidades, Float precio) {
         Idpelicula = idpelicula;
         Imagen = imagen;
         this.nombre = nombre;
         this.genero = genero;
         this.año = año;
         this.unidades = unidades;
+        this.precio = precio;
     }
 
 

@@ -34,6 +34,12 @@ public class Controlador {
    public String MainPage(Model model) {
    model.addAttribute("comedias", peliimple.listarPeliculaPorComedia());
    model.addAttribute("terror", peliimple.listarporTerror());
+   model.addAttribute("suspenso", peliimple.listarporSuspenso());
+   model.addAttribute("accion", peliimple.listarporAccion());
+   model.addAttribute("romance", peliimple.listarporRomance());
+   model.addAttribute("aventura", peliimple.listarporAventura());
+   model.addAttribute("drama", peliimple.listarporDrama());
+
 
    // Recorrer Array
 //    var ArrayPelis = peliimple.listarPeliculaPorComedia();
